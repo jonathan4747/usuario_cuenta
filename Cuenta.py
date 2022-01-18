@@ -6,9 +6,13 @@ class Cuenta:
     
     def hacer_retiro(self, monto):
         self.cuenta = self.cuenta - monto
-        return self.cuenta
+        return self
+    def hacer_deposito(self,monto):
+        self.cuenta = self.cuenta+monto
+        return self        
     def imprimir_estado_cuenta(self):
         print(self.nombre, str(self.cuenta))
+        return self
         
     def tranferncia (self, usuario ,monto):
         self.cuenta = self.cuenta-monto
